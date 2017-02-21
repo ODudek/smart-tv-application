@@ -1,0 +1,9 @@
+body {
+    width: 1280px;
+    height: 720px;
+}
+
+nav {
+    position: absolute;
+    background: #4d7dff;
+}
