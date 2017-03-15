@@ -1,0 +1,34 @@
+http://underscorejs.org/ (template)
+
+screen{
+    name: string,
+        collections: collection[],
+        activeCollectionIndex: number
+}
+
+collection[
+    name: string,
+    list: item[],
+    acvtiveIndex: number
+    ]
+
+item[
+    name: string,
+    url: string,
+    ]
+
+w screen funkcja render
+render(){
+    let app = document.querySelector('#app');
+    let compile = _template(HTML,{
+        screen: this;
+    })
+}
+
+<ul>
+    <% screenm collecion[0].list.forEach>
+    <li><%=item name>
+    <li><%=item url>
+</ul>
+
+    systemy szablonów
