@@ -1,3 +1,10 @@
+app.models.remoteCode = {
+    up: 38,
+    down: 40,
+    left: 37,
+    right: 39
+};
+
 app.models.screen = {
     name: '',
     collections: {},
@@ -34,6 +41,10 @@ app.models.screen.collections[0].list = [{
     isActive: false,
     name: 'przyklad2',
     href: '#'
+}, {
+    isActive: false,
+    name: 'przyklad3',
+    href: '#'
 }];
 
 app.models.screen.collections[1].list = [{
@@ -42,6 +53,10 @@ app.models.screen.collections[1].list = [{
     href: '#'
 }, {
     name: 'przyklad2',
+    url: 'http://lorempixel.com/200/400/',
+    href: '#'
+}, {
+    name: 'przyklad3',
     url: 'http://lorempixel.com/200/400/',
     href: '#'
 }];

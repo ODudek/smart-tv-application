@@ -1,3 +1,5 @@
 window.app = {
-    models: {}
+    models: {},
+    view: {},
+    controller: {}
 };

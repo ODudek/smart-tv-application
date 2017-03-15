@@ -1,8 +1,11 @@
 module.exports = {
     entry: {
-        main: './scripts/main.js',
         namespace: './scripts/app.js',
-        view: './scripts/models.js'
+        models: './scripts/models.js',
+        view: './scripts/view.js',
+        controller: './scripts/controller.js',
+        main: './scripts/main.js'
+
     },
     output: {
         path: './dist/',

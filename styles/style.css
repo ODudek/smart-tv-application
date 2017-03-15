@@ -15,9 +15,6 @@ body {
 
 #menu nav {
     width: 1280px;
-    position: fixed;
-    left: 0;
-    top: 0;
 }
 
 #menu ul {
@@ -28,16 +25,27 @@ body {
     background-color: #333;
 }
 
-#menu li {
+li {
     float: left;
     cursor: pointer;
     height: 50px;
 }
 
-#menu li a {
+#menu a {
+    color: #ffffff;
+}
+
+li a {
     display: block;
-    color: white;
     text-align: center;
     padding: 14px 36px;
     text-decoration: none;
+}
+
+#content ul {
+    list-style-type: none;
+}
+
+img {
+    padding: 14px 36px;
 }
