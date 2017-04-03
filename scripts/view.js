@@ -1,26 +1,31 @@
-app.view.menu = _.template('<nav><div id="menu"> <ul> ' +
+app.view.menu = _.template('<header><nav><div id="menu">' +
+    '<ul class="list">' +
     '<% _.each(app.models.screen.collections[0].list, function( list ){ %>' +
     '<% if(list.isActive) { %>' +
     '<li class="active"><a href="<%= list.href%>"><%= list.name%></a></li>' +
     '<% } else { %>' +
-    '<li><a href="<%= list.href%>"><%= list.name%></a></li> ' +
-    '<%}}) %> ' +
-    '</ul></div></nav>');
+    '<li><a href="<%= list.href%>"><%= list.name%></a></li>' +
+    '<%}}) %>' +
+    '</ul>' +
+    '</div></nav></header>');
 
 app.view.content = _.template('<section><div id="content">' +
-    '<ul>' +
+    '<ul class="list">' +
     '<% _.each(app.models.screen.collections[1].list, function( list ){ %>' +
     '<% if(list.isActive) { %>' +
-    '<li class="active"><img src="<%= list.url%>"><a href="<%= list.href%>"><%= list.name%></a></li>' +
+    '<li><img src="<%= list.url%>"><a class="active" href="<%= list.href%>"><%= list.name%></a></li>' +
     '<% } else { %>' +
-    '<li><img src="<%= list.url%>"><a href="<%= list.href%>"><%= list.name%></a></li> ' +
-    '<%}}) %> ' +
+    '<li><img src="<%= list.url%>"><a href="<%= list.href%>"><%= list.name%></a></li>' +
+    '<%}}) %>' +
     '</ul>' +
     '</div></section>');
 
-function renderScreen() {
-    app.models.screen.render(app.view.menu());
-    app.models.screen.render(app.view.content());
-}
-
-renderScreen();
+app.view.footer = _.template('<footer><div id="footer">' +
+    '<ul class="list">' +
+    '<% _.each(app.models.screen.collections[2].list, function( list ){ %>' +
+    '<% if(list.isActive) { %>' +
+    '<li class="active"><a href="<%= list.href%>"><%= list.name%></a></li>' +
+    '<% } else { %>' +
+    '<li><a href="<%= list.href%>"><%= list.name%></a></li>' +
+    '<%}}) %> ' +
+    '</ul></div></footer>');
